@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Categories=Development;
+Terminal=false
+Icon=applications-accessories
+Icon[en_US]=applications-accessories
+Name[en_US]=UniConsole
+Exec=/home/dev/1-projects/UniConsoleFramework/ucfroot/bin/100120-ucf/AppImageSrc/AppDir/bin/UniConsole
+Name=UniConsole
+X-AppImage-Version=

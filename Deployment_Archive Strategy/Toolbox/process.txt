@@ -1,0 +1,13 @@
+
+to build deployment package
+1.	copy the ucfroot template structure to either ~/ or c:\.
+2.	Build and debug as needed
+3.	copy whole structure to Ucf<Release Name><Date>
+4.	copy the template module project from to <release>/usr/src/<template name>
+5.	remove all .git subdirs from the package
+
+to deploy
+1.	copy the package into ~/ucfroot, or c:\ucfroot
+2.	execute the appropriate environment config script in /ucfroot/opt/UcfBuildConfig
+3.	copy the template module project from ./opt/GouptTpl/INSTANCE/_TplModule_Project and customize
+

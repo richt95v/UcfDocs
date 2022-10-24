@@ -1,0 +1,62 @@
+UcfRoot/				        -> The base for a build or distribution. Can be in ~/. or c:\ 
+│       
+├── bin					        -> contain Ucf distributions
+│   ├── <UCF-WxTemplate>        -> returned by GetApplicationBasePath()
+│   │  ├── UniConsole.exe       -> built on wx
+│   │  │ 
+│   │  ├── IOConfig			    -> contains default iochannel and pathlink databases
+│   │  ├── OptionalModules		-> contains optional module included in the distribution
+│   │  ├── StaticModules		-> contains modules that will always be loaded, profile or not
+│   │  └── Utility			    -> contains utility modules that support the distribution
+│   │    
+│   └── <UCF-LxTemplate>            -> returned by GetApplicationBasePath()
+│       ├── UniConsole.AppImage		-> built from ./AppDir/bin/UniConsole  using linuxdeployqt
+│       │ 
+│       ├── AppImageSrc			    -> contains an appimage and/or a build output structure
+│       │   └── AppDir			    -> the build  output structure
+│       │       ├── applications-accessories.png    -> the required desktop icon
+│       │       └── bin
+│       │           ├── IOConfig
+│       │           │   ├── BaseSystemIO.sdb
+│       │           │   └── PathLinks.sdb
+│       │           │   
+│       │           ├── OptionalModules
+│       │           │   ├── libUniConsoleGui-8u.so
+│       │           │   └── libUniConsoleTestSequencer-8u.so
+│       │           │   
+│       │           ├── StaticModules
+│       │           │   ├── libCmdLineProcessor.so
+│       │           │   └── libIOChannelSystemModule.so
+│       │           │   
+│       │           └── UniConsole
+│       ├── AppImageSrcBuild
+│       │       ├── appimagetool-x86_64.AppImage
+│       │       ├── BuildUcfAppImage.bsh
+│       │       ├── linuxdeployqt-continuous-x86_64.AppImage
+│       │       └── UniConsole.desktop
+│       ├── IOConfig			-> contains default iochannel and pathlink databases
+│       ├── OptionalModules		-> contains optional module included in the distribution
+│       ├── StaticModules		-> contains modules that will always be loaded, profile or not
+│       └── Utility			    -> contains utility modules that support the distribution
+│       
+│       
+├── opt					        -> contains profile groups, and profiles
+│   └── GroupTpl			    -> returned by iAppEngine::GetProfileBasePath()
+│       ├── Etc				    -> returned by iAppEngine::GetEtcFilePath()
+│       ├── ExtendedCommands	-> returned by iAppEngine::GetCommandExtensionPath()
+│       ├── CommonLibs			-> automatically loaded for all profiles in this group
+│       ├── ExtSystemIO.sdb     -> the primary IO channel database
+│       ├── PathLinksEx.sdb     -> the primary IO channel database       
+│       └── INSTANCE			-> a profile name
+│           ├── LastTest.log	-> test data from the most recent test
+│           └── libTplModule.so	-> a profile module
+└── usr
+    └── src				           -> contains source code for the distribution modules
+        └── 100120
+            ├── <name>
+                ├── ... .pro
+                └── Src
+                    ├── ... .cpp
+                    └── ... .hpp
+
+35 directories, 139 files

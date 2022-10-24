@@ -1,0 +1,6 @@
+
+./linuxdeployqt-continuous-x86_64.AppImage UniConsole.desktop
+
+./appimagetool-x86_64.AppImage ../../bin/100120-ucf/AppImageSrc/
+
+

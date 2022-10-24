@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#cp -arvf ./ucfroot-tpl ~/ucfroot
+
+############################################################################################################:w
+
+# goes into ~/.bashrc
+
+export UCF_RELEASE_NAME=UCF-LxTemplate
+export UCF_BIN_NAME=AppImageSrc/AppDir/bin
+
+export UCF_RELEASE_ROOT=~/ucfroot
+export UCF_CODE_REPOS=~/5-CodeRepository
+
+export UCF_API=$UCF_RELEASE_ROOT/usr/src/$UCF_RELEASE_NAME/Api
+
+
+

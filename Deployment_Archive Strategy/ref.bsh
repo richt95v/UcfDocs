@@ -1,0 +1,39 @@
+#!/bin/bash
+
+function SetEnv() {
+    export UCF_RELEASE_NAME=CurrentRelease
+    export UCF_BIN_NAME=AppImageSrc/AppDir/bin
+
+    export UCF_RELEASE_ROOT=$PWD/ucfroot
+    export UCF_CODE_REPOS=~/5-CodeRepository
+    export UCF_API=$UCF_RELEASE_ROOT/usr/src/$UCF_RELEASE_NAME/Api
+}
+
+opstring=":sc"
+while getopts ${opstring} arg; do
+    case ${arg} in
+        s)
+            echo "Setting required environment variables"
+            SetEnv
+            ;;
+        :)
+            echo "Setting required environment variables"
+            SetEnv
+            ;;
+        c) 
+            echo "Creating the required directory structure"
+            echo "ccc"
+            ;;
+        h) 
+            echo "hhh"
+            ;;
+
+        #n) Name=$OPTARG;;
+        #m) Manufacturing_date=$OPTARG;;
+        #e) Expire_date=$OPTARG;;
+    esac
+done
+
+
+
+#echo "xx"

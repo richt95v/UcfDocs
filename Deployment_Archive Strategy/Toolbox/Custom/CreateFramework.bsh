@@ -1,0 +1,46 @@
+#!/bin/bash
+
+export UCF_RELEASE_NAME=CurrentRelease
+export UCF_BIN_NAME=AppImageSrc/AppDir/bin
+
+export UCF_RELEASE_ROOT=$PWD/ucfroot
+export UCF_CODE_REPOS=~/5-CodeRepository
+export UCF_API=$UCF_RELEASE_ROOT/usr/src/$UCF_RELEASE_NAME/Api
+
+# directories must be individually created and copied into from these instructions to maintain control over content
+# vs just copying a directory structure
+
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/AppImageSrc
+#               applications-accessories.png
+#               UniConsole.desktop
+
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/AppImageSrc/AppDir/bin/IOConfig
+#               BaseSystemIO.sdb
+#               PathLinks.sdb
+
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/AppImageSrc/AppDir/bin/OptionalModules
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/AppImageSrc/AppDir/bin/StaticModules
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/AppImageBuild
+#               appimagetool-x86_64.AppImage
+#               BuildUcfAppImage.bsh
+#               linuxdeployqt-continuous-x86_64.AppImage
+#               UniConsole.desktop
+
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/IOConfig
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/OptionalModules
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/StaticModules
+mkdir -p ucfroot/bin/$UCF_RELEASE_NAME/Utility
+
+
+mkdir -p ucfroot/Opt/GroupTpl
+#               ExtSystemIO.sdb
+#               PathLinksEx.sdb
+
+mkdir -p ucfroot/Opt/GroupTpl/CommonLibs
+mkdir -p ucfroot/Opt/GroupTpl/Etc
+mkdir -p ucfroot/Opt/GroupTpl/PathLinksEx.sdb
+mkdir -p ucfroot/Opt/GroupTpl/ExtendedCommands
+mkdir -p ucfroot/Opt/GroupTpl/INSTANCE
+
+mkdir -p ucfroot/usr/src
+

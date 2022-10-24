@@ -1,0 +1,9 @@
+#!/bin/bash
+
+export UCF_RELEASE_NAME=CurrentRelease
+export UCF_BIN_NAME=AppImageSrc/AppDir/bin
+
+export UCF_RELEASE_ROOT=$PWD/ucfroot
+export UCF_CODE_REPOS=~/5-CodeRepository
+export UCF_API=$UCF_RELEASE_ROOT/usr/src/$UCF_RELEASE_NAME/Api
+

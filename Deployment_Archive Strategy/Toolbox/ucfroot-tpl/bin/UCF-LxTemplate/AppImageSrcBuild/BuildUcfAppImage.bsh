@@ -1,0 +1,13 @@
+
+if [[ $1 ]]
+then
+	./linuxdeployqt-continuous-x86_64.AppImage UniConsole.desktop
+	./appimagetool-x86_64.AppImage ../AppImageSrc/ ../UniConsole-$1.AppImage
+
+	cp ../AppImageSrc/AppDir/bin/IOConfig/* ../IOConfig/
+	cp ../AppImageSrc/AppDir/bin/OptionalModules/* ../OptionalModules/
+	cp ../AppImageSrc/AppDir/bin/StaticModules/* ../StaticModules/
+
+else
+	echo "Enter a release name"
+fi
